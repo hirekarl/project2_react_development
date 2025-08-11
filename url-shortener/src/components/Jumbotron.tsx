@@ -10,11 +10,14 @@ const Jumbotron = () => {
         {/* Illustration needs to be on top when smaller than lg. */}
         <Col lg="6">
           <h1>More than just shorter links</h1>
-          <p>
+          <p style={{ color: "var(--color-grayish-violet)" }}>
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </p>
-          <Button variant="primary" className="rounded rounded-pill">
+          <Button
+            variant="primary"
+            className="rounded-pill border-0 px-4"
+            style={{ backgroundColor: "var(--color-cyan)", fontWeight: "700" }}>
             Get Started
           </Button>
         </Col>

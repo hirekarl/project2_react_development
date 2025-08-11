@@ -9,8 +9,31 @@
 
 :root {
   --bs-body-font-family: "Poppins", sans-serif;
+
+  /* Primary Colors */
+  --color-cyan: hsl(180, 66%, 49%);
+  --color-dark-violet: hsl(257, 27%, 26%);
+
+  /* Secondary Colors */
+  --color-red: hsl(0, 87%, 67%);
+
+  /* Neutral Colors */
+  --color-gray: hsl(0, 0%, 75%);
+  --color-grayish-violet: hsl(257, 7%, 63%);
+  --color-very-dark-blue: hsl(255, 11%, 22%);
+  --color-very-dark-violet: hsl(260, 8%, 14%);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
+  color: var(--color-very-dark-violet);
+}
+
+.info-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--color-cyan);
+  background-color: var(--color-dark-violet);
 }
