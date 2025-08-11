@@ -1,26 +1,26 @@
-import { Container, Row } from "react-bootstrap"
+import { Button, Container, Col, Image, Row } from "react-bootstrap"
 
 import illustration from "../assets/illustration-working.svg"
 
 const Jumbotron = () => {
   return (
-    <Container className="mt-3">
+    <Container className="my-4">
       <Row>
         {/* Text needs to show up in the vertical center. */}
         {/* Illustration needs to be on top when smaller than lg. */}
-        <div className="col-lg-6">
-          <h1 style={{ fontWeight: 700 }}>More than just shorter links</h1>
+        <Col lg="6">
+          <h1>More than just shorter links</h1>
           <p>
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </p>
-          <button type="button" className="btn btn-primary rounded rounded-5">
+          <Button variant="primary" className="rounded rounded-pill">
             Get Started
-          </button>
-        </div>
-        <div className="col-lg-6">
-          <img src={illustration} />
-        </div>
+          </Button>
+        </Col>
+        <Col lg="6">
+          <Image src={illustration} />
+        </Col>
       </Row>
     </Container>
   )
