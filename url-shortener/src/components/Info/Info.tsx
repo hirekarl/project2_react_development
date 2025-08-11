@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap"
 import InfoCard from "./InfoCard"
 
-import iconBrandRecognition from "../assets/icon-brand-recognition.svg"
-import iconDetailedRecords from "../assets/icon-detailed-records.svg"
-import iconFullyCustomizable from "../assets/icon-fully-customizable.svg"
+import iconBrandRecognition from "../../assets/icon-brand-recognition.svg"
+import iconDetailedRecords from "../../assets/icon-detailed-records.svg"
+import iconFullyCustomizable from "../../assets/icon-fully-customizable.svg"
 
 const Info = () => {
   return (

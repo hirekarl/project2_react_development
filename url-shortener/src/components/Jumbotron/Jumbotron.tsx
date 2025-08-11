@@ -1,13 +1,11 @@
 import { Button, Container, Col, Image, Row } from "react-bootstrap"
 
-import illustration from "../assets/illustration-working.svg"
+import illustration from "../../assets/illustration-working.svg"
 
 const Jumbotron = () => {
   return (
     <Container className="my-4">
-      <Row>
-        {/* Text needs to show up in the vertical center. */}
-        {/* Illustration needs to be on top when smaller than lg. */}
+      <Row className="align-items-center">
         <Col lg="6">
           <h1>More than just shorter links</h1>
           <p style={{ color: "var(--color-grayish-violet)" }}>
@@ -17,11 +15,14 @@ const Jumbotron = () => {
           <Button
             variant="primary"
             className="rounded-pill border-0 px-4"
-            style={{ backgroundColor: "var(--color-cyan)", fontWeight: "700" }}>
+            style={{
+              backgroundColor: "var(--color-cyan)",
+              fontWeight: "700",
+            }}>
             Get Started
           </Button>
         </Col>
-        <Col lg="6">
+        <Col lg="6" className="overflow-x-hidden">
           <Image src={illustration} />
         </Col>
       </Row>
