@@ -1,9 +1,8 @@
-import { Button, Row, Col, Container } from "react-bootstrap"
-
-import bgShorten from "../../assets/bg-shorten-desktop.png"
 import { useState, type ChangeEvent } from "react"
-import ShortLinkList from "./ShortLinkList"
+import { Button, Row, Col, Container } from "react-bootstrap"
 import type { ShortLink } from "../../types"
+import ShortLinkList from "./ShortLinkList"
+import bgShorten from "../../assets/bg-shorten-desktop.png"
 
 const API_ENDPOINT = "https://api-ssl.bitly.com/v4/shorten"
 const ACCESS_TOKEN = import.meta.env.VITE_API_ACCESS_TOKEN
