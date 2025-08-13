@@ -20,11 +20,17 @@ const LinkShortener = () => {
   const [inputEmpty, setInputEmpty] = useState<boolean>(true)
   const [shortLinks, setShortLinks] = useLocalStorage([
     {
-      id: "https://bit.ly/fake-link",
-      link: "https://bit.ly/fake-link",
-      long_url: "https://www.example.com/a-very-long-link-that-will-wrap-on-small-screens/",
-      created_at: "2025-08-13",
+      id: "https://bit.ly/3UseDxS",
+      link: "https://bit.ly/3UseDxS",
+      long_url: "https://www.boot.dev/",
+      created_at: "2025-08-13T14:27:00-04:00"
     },
+    {
+      id: "https://bit.ly/4mA3J52",
+      link: "https://bit.ly/4mA3J52",
+      long_url: "https://www.google.com/",
+      created_at: "2025-08-13T10:44:00-04:00",
+    }
   ])
 
   const [loading, setLoading] = useState<boolean>(false)
