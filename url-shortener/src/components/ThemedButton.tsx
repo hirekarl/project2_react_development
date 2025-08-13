@@ -1,5 +1,6 @@
 interface ThemedButtonProps {
   text: string
+  backgroundColor?: string
   pill?: boolean
   disabled?: boolean
   className?: string
@@ -8,6 +9,7 @@ interface ThemedButtonProps {
 
 const ThemedButton = ({
   text,
+  backgroundColor = "var(--color-cyan)",
   pill,
   disabled,
   className,
@@ -15,16 +17,16 @@ const ThemedButton = ({
 }: ThemedButtonProps) => {
   const buttonStyle = {
     color: "white",
-    backgroundColor: "var(--color-cyan)",
-    fontWeight: "700",
+    backgroundColor: backgroundColor,
+    fontWeight: 700,
   }
   return (
     <button
       type="button"
+      style={buttonStyle}
       className={`btn themed-button ${
         pill ? "rounded-pill px-4" : "rounded-2 px-2"
       } border-0 ${className}`}
-      style={buttonStyle}
       onClick={onClick}
       disabled={disabled}>
       {text}
