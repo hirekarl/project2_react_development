@@ -7,7 +7,7 @@ import logo from "../../assets/logo.svg"
 const NavBar = () => {
   return (
     <Navbar expand="lg">
-      <Container>
+      <Container className="py-3">
         <Navbar.Brand href="#home">
           <img src={logo} />
         </Navbar.Brand>
