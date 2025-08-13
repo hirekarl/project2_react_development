@@ -4,19 +4,25 @@
 2025-RTT-30  
 <time datetime="2025-08-11">2025-08-11</time>  
 
-![Alt text for preview image.](./preview.png)
+![Screenshot of Project 2 in deployment.](./preview.png)
 
 ## Overview
 ### Viewer Instructions
-Navigate to [[LINK GOES HERE]]() in the browser.
+Navigate to https://wondrous-begonia-039680.netlify.app/ in the browser.
 
 ### Submission Source
-Top-level application behavior can be found in [`./url-shortener/src/App.tsx`](./url-shortener/src/App.tsx).
+Top-level application behavior can be found in [`./src/App.tsx`](./src/App.tsx).
 
 ### Reflection
 Write a 200-300 word reflection discussing your development process, challenges faced, solutions implemented, and potential improvements.
 
-> TODO
+> Have mercy! A few design elements are missing, especially in the "Info" section, where the spec calls for special positioning and a decorative line connecting the cards. I got too far working in the React Bootstrap ecosystem before I realized some of this custom CSS was going to be difficult to wrangle with the built-in components I chose, so I opted for nailing the functionality and approximating design implementation details in a few spots.
+>
+> Note that the Bitly API only allows for five shortlinks per month, and I've already used two. I tested the fetch functionality, and it works; I put in a fake URL to demonstrate where real URLs will end up when the app is run for real. I'm fairly certain the `useLocalStorage` hook works (and sets the fake URL as a default value on first load), but I wasn't able to test with real shortlinks, given the API constraints.
+> 
+> The main "reusable" component I implemented for this was a `ThemedButton`, which changes rounding, padding, and functionality based on given props. I managed to implement a change of background color when a shortlink is copied. I'm certain I could clean up the implementation of `ThemedButton` and make it even more reusable with more time.
+>
+> Working around the API constraints for this was the most difficult part (I tried a few other APIs but ran into the same issue); the other was working with Bootstrap to implement the design elements that change by breakpoint. (I'm looking forward to our shift to the back end!) I particularly like that when you hover over the "Shortly" logo, it compresses. I didn't see any reason to implement contexts for this, or any hooks beyond the `useLocalStorage` hook.
 
 ## Assignment
 For this cumulative assessment on React, you will select and complete one of the following Frontend Mentor  challenges:
@@ -33,6 +39,3 @@ This project aims to assess your ability to apply the skills and knowledge acqui
 If you have completed the HTML, CSS, and JavaScript modules with Per Scholas, you may be familiar with these project starters. As part of this project, you will be required to use React, but the project will be very similar to the projects you completed in the HTML, CSS, and JavaScript modules.
 
 To challenge yourself, try to complete the project without using too much of the code from your previous projects. Or, if you are feeling ambitious, complete one (or both!) of the options you have not yet worked on.
-
-
-## Attributions
