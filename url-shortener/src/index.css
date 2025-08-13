@@ -35,6 +35,21 @@ strong {
   font-weight: 700;
 }
 
+.nav-link {
+  color: var(--color-grayish-violet);
+  font-weight: 700;
+}
+
+.long-url {
+  color: var(--color-very-dark-violet);
+  font-weight: 700;
+}
+
+.short-url {
+  color: var(--color-cyan);
+  font-weight: 700;
+}
+
 .info-icon {
   height: 2.5rem;
   width: 2.5rem;
@@ -64,6 +79,11 @@ strong {
 
 .themed-button:hover {
   filter: brightness(1.2) saturate(0.4);
+}
+
+.footer-link-header {
+  color: white;
+  font-weight: 700;
 }
 
 .footer-link-list {

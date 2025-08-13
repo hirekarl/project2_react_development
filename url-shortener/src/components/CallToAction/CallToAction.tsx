@@ -17,8 +17,8 @@ const CallToAction = () => {
         backgroundRepeat: "no-repeat",
       }}>
       <div className="py-5">
-        <h2 className="mt-5 mb-2 text-white">Boost your links today</h2>
-        <ThemedButton pill={true} text="Get Started" />
+        <h2 className="mt-5 mb-4 text-white">Boost your links today</h2>
+        <ThemedButton pill={true} text="Get Started" className="mb-5" />
       </div>
     </Container>
   )

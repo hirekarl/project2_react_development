@@ -105,7 +105,7 @@ const LinkShortener = () => {
               <ThemedButton
                 pill={false}
                 text={loading ? "Loading..." : "Shorten It!"}
-                className="w-100"
+                className="w-100 p-2"
                 onClick={handleClick}
                 disabled={inputEmpty || loading}
               />

@@ -13,16 +13,20 @@ const Footer = () => {
       fluid
       style={{ backgroundColor: "var(--color-very-dark-violet)" }}>
       <Row className="py-5">
-        <Col lg="4">
+        <Col lg="4" className="mb-lg-0 mb-5">
           <div className="d-flex justify-content-center">
-            <Image src={logo} style={{ filter: "brightness(0) invert(1)" }} className="logo" />
+            <Image
+              src={logo}
+              style={{ filter: "brightness(0) invert(1)" }}
+              className="logo"
+            />
           </div>
         </Col>
         <Col lg="4">
           <Row>
-            <Col lg="4">
-              <p className="text-white">
-                <strong>Features</strong>
+            <Col lg="4" className="text-lg-start text-center mb-lg-0 mb-3">
+              <p className="footer-link-header">
+                Features
               </p>
               <ul className="list-unstyled footer-link-list">
                 <li>
@@ -36,10 +40,11 @@ const Footer = () => {
                 </li>
               </ul>
             </Col>
-            <Col lg="4">
-              <p style={{ color: "white", fontWeight: "700" }}>Resources</p>
-              <ul
-                className="list-unstyled footer-link-list">
+            <Col lg="4" className="text-lg-start text-center mb-lg-0 mb-3">
+              <p className="footer-link-header">
+                Resources
+              </p>
+              <ul className="list-unstyled footer-link-list">
                 <li>
                   <a href="#">Blog</a>
                 </li>
@@ -51,10 +56,11 @@ const Footer = () => {
                 </li>
               </ul>
             </Col>
-            <Col lg="4">
-              <p style={{ color: "white", fontWeight: "700" }}>Company</p>
-              <ul
-                className="list-unstyled footer-link-list">
+            <Col lg="4" className="text-lg-start text-center mb-lg-0 mb-3">
+              <p className="footer-link-header">
+                Company
+              </p>
+              <ul className="list-unstyled footer-link-list">
                 <li>
                   <a href="#">About</a>
                 </li>
