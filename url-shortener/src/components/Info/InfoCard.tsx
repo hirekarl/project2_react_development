@@ -17,7 +17,8 @@ const InfoCard = ({ icon, headingText, bodyText }: InfoCardProps) => {
         />
         <Card.Body>
           <Card.Title
-            style={{ color: "var(--color-very-dark-blue)", fontWeight: "700" }}>
+            className="text-very-dark-blue"
+            style={{ fontWeight: 700 }}>
             {headingText}
           </Card.Title>
           <Card.Text style={{ color: "var(--color-grayish-violet)" }}>

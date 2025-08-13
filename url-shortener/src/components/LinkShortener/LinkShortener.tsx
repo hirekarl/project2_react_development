@@ -22,7 +22,8 @@ const LinkShortener = () => {
     {
       id: "1",
       link: "https://bit.ly/test",
-      long_url: "https://www.example.com/very-long-lin-that-will-wrap-on-mobile-screens/",
+      long_url:
+        "https://www.example.com/very-long-link-that-will-wrap-on-smaller-screens/",
       created_at: "2025-08-13",
     },
   ])
@@ -105,6 +106,9 @@ const LinkShortener = () => {
               <ThemedButton
                 pill={false}
                 text={loading ? "Loading..." : "Shorten It!"}
+                backgroundColor={
+                  loading ? "var(--color-dark-violet)" : "var(--color-cyan)"
+                }
                 className="w-100 p-2"
                 onClick={handleClick}
                 disabled={inputEmpty || loading}

@@ -69,6 +69,10 @@ strong {
   color: var(--color-grayish-violet);
 }
 
+.text-very-dark-blue {
+  color: var(--color-very-dark-blue);
+}
+
 .text-very-dark-violet {
   color: var(--color-very-dark-violet);
 }
