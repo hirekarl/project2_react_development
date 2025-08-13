@@ -1,9 +1,9 @@
 import { useState, type ChangeEvent } from "react"
 import { Row, Col, Container } from "react-bootstrap"
-import type { ShortLink } from "../../types"
 import ShortLinkList from "./ShortLinkList"
 import ThemedButton from "../ThemedButton"
 import bgShorten from "../../assets/bg-shorten-desktop.png"
+import { useLocalStorage } from "../../hooks/useLocalStorage"
 
 const API_ENDPOINT = "https://api-ssl.bitly.com/v4/shorten"
 const ACCESS_TOKEN = import.meta.env.VITE_API_ACCESS_TOKEN
@@ -18,12 +18,11 @@ class APIError extends Error {
 const LinkShortener = () => {
   const [longUrl, setLongUrl] = useState<string>("")
   const [inputEmpty, setInputEmpty] = useState<boolean>(true)
-  const [shortLinks, setShortLinks] = useState<ShortLink[]>([
+  const [shortLinks, setShortLinks] = useLocalStorage([
     {
-      id: "1",
-      link: "https://bit.ly/test",
-      long_url:
-        "https://www.example.com/very-long-link-that-will-wrap-on-smaller-screens/",
+      id: "https://bit.ly/fake-link",
+      link: "https://bit.ly/fake-link",
+      long_url: "https://www.example.com/a-very-long-link-that-will-wrap-on-small-screens/",
       created_at: "2025-08-13",
     },
   ])
