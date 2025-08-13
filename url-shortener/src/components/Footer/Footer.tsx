@@ -12,62 +12,60 @@ const Footer = () => {
     <Container
       fluid
       style={{ backgroundColor: "var(--color-very-dark-violet)" }}>
-      <Row className="pt-5 pb-5">
+      <Row className="py-5">
         <Col lg="4">
           <div className="d-flex justify-content-center">
-            <Image src={logo} style={{ filter: "brightness(0) invert(1)" }} />
+            <Image src={logo} style={{ filter: "brightness(0) invert(1)" }} className="logo" />
           </div>
         </Col>
         <Col lg="4">
           <Row>
             <Col lg="4">
-              <p style={{ color: "white", fontWeight: "700" }}>Features</p>
-              <ul
-                className="list-unstyled"
-                style={{ color: "var(--color-gray)", lineHeight: "2.5" }}>
+              <p className="text-white">
+                <strong>Features</strong>
+              </p>
+              <ul className="list-unstyled footer-link-list">
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Link Shortening</a>
+                  <a href="#">Link Shortening</a>
                 </li>
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Branded Links</a>
+                  <a href="#">Branded Links</a>
                 </li>
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Analytics</a>
+                  <a href="#">Analytics</a>
                 </li>
               </ul>
             </Col>
             <Col lg="4">
               <p style={{ color: "white", fontWeight: "700" }}>Resources</p>
               <ul
-                className="list-unstyled"
-                style={{ color: "var(--color-gray)", lineHeight: "2.5" }}>
+                className="list-unstyled footer-link-list">
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Blog</a>
+                  <a href="#">Blog</a>
                 </li>
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Developers</a>
+                  <a href="#">Developers</a>
                 </li>
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Support</a>
+                  <a href="#">Support</a>
                 </li>
               </ul>
             </Col>
             <Col lg="4">
               <p style={{ color: "white", fontWeight: "700" }}>Company</p>
               <ul
-                className="list-unstyled"
-                style={{ color: "var(--color-gray)", lineHeight: "2.5" }}>
+                className="list-unstyled footer-link-list">
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">About</a>
+                  <a href="#">About</a>
                 </li>
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Our Team</a>
+                  <a href="#">Our Team</a>
                 </li>
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Careers</a>
+                  <a href="#">Careers</a>
                 </li>
                 <li>
-                  <a style={{color: "var(--color-gray)", textDecoration: "none"}} href="#">Contact</a>
+                  <a href="#">Contact</a>
                 </li>
               </ul>
             </Col>
@@ -76,16 +74,16 @@ const Footer = () => {
         <Col lg="4">
           <div className="d-flex justify-content-center gap-3">
             <a href="#">
-              <Image src={iconFacebook} style={{ width: "1.25rem" }} />
+              <Image src={iconFacebook} className="footer-icon" />
             </a>
             <a href="#">
-              <Image src={iconTwitter} style={{ width: "1.25rem" }} />
+              <Image src={iconTwitter} className="footer-icon" />
             </a>
             <a href="#">
-              <Image src={iconPinterest} style={{ width: "1.25rem" }} />
+              <Image src={iconPinterest} className="footer-icon" />
             </a>
             <a href="#">
-              <Image src={iconInstagram} style={{ width: "1.25rem" }} />
+              <Image src={iconInstagram} className="footer-icon" />
             </a>
           </div>
         </Col>

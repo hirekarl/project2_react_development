@@ -31,9 +31,69 @@ h3 {
   color: var(--color-very-dark-violet);
 }
 
+strong {
+  font-weight: 700;
+}
+
 .info-icon {
   height: 2.5rem;
   width: 2.5rem;
   color: var(--color-cyan);
   background-color: var(--color-dark-violet);
+}
+
+.text-cyan {
+  color: var(--color-cyan);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.text-grayish-violet {
+  color: var(--color-grayish-violet);
+}
+
+.text-very-dark-violet {
+  color: var(--color-very-dark-violet);
+}
+
+.themed-button {
+  transition: filter 0.15s ease;
+}
+
+.themed-button:hover {
+  filter: brightness(1.2) saturate(0.4);
+}
+
+.footer-link-list {
+  line-height: 2.5;
+}
+
+.footer-link-list li a {
+  color: var(--color-gray);
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+
+.footer-link-list li a:hover {
+  filter: brightness(1.5);
+}
+
+.footer-icon {
+  width: 1.25rem;
+  transition: filter 0.15s ease;
+}
+
+.footer-icon:hover {
+  filter: brightness(0.75);
+}
+
+.logo {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.logo:hover {
+  transform: scaleX(0.75);
 }

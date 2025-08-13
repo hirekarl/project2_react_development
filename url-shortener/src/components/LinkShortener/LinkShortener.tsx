@@ -1,7 +1,8 @@
 import { useState, type ChangeEvent } from "react"
-import { Button, Row, Col, Container } from "react-bootstrap"
+import { Row, Col, Container } from "react-bootstrap"
 import type { ShortLink } from "../../types"
 import ShortLinkList from "./ShortLinkList"
+import ThemedButton from "../ThemedButton"
 import bgShorten from "../../assets/bg-shorten-desktop.png"
 
 const API_ENDPOINT = "https://api-ssl.bitly.com/v4/shorten"
@@ -17,7 +18,14 @@ class APIError extends Error {
 const LinkShortener = () => {
   const [longUrl, setLongUrl] = useState<string>("")
   const [inputEmpty, setInputEmpty] = useState<boolean>(true)
-  const [shortLinks, setShortLinks] = useState<ShortLink[]>([])
+  const [shortLinks, setShortLinks] = useState<ShortLink[]>([
+    {
+      id: "1",
+      link: "https://bit.ly/test",
+      long_url: "https://www.example.com/very-long-lin-that-will-wrap-on-mobile-screens/",
+      created_at: "2025-08-13",
+    },
+  ])
 
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
@@ -65,7 +73,7 @@ const LinkShortener = () => {
   return (
     <>
       <Container
-        className="mt-4 mb-3 px-2 rounded-2"
+        className="mt-4 mb-3 mx-auto px-2 rounded-2"
         style={{
           backgroundColor: "var(--color-dark-violet)",
           backgroundImage: `url(${bgShorten})`,
@@ -73,7 +81,7 @@ const LinkShortener = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           height: "100%",
-          width: "100%",
+          width: "calc(100% - 1rem)",
         }}>
         <div className="p-4">
           <Row className="align-items-center">
@@ -94,19 +102,13 @@ const LinkShortener = () => {
               )}
             </Col>
             <Col xl="2" lg="2" md="4" sm="12" className="mb-1">
-              <Button
-                style={{
-                  color: "white",
-                  backgroundColor: "var(--color-cyan)",
-                  fontWeight: "700",
-                }}
-                variant="primary"
-                type="button"
-                className="btn rounded-2 p-2 border-0 w-100"
+              <ThemedButton
+                pill={false}
+                text={loading ? "Loading..." : "Shorten It!"}
+                className="w-100"
+                onClick={handleClick}
                 disabled={inputEmpty || loading}
-                onClick={handleClick}>
-                {loading ? "Loading..." : "Shorten It!"}
-              </Button>
+              />
             </Col>
           </Row>
         </div>

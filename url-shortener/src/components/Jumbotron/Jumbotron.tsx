@@ -1,4 +1,5 @@
-import { Button, Container, Col, Image, Row } from "react-bootstrap"
+import { Container, Col, Image, Row } from "react-bootstrap"
+import ThemedButton from "../ThemedButton"
 
 import illustration from "../../assets/illustration-working.svg"
 
@@ -8,19 +9,13 @@ const Jumbotron = () => {
       <Row className="align-items-center">
         <Col lg="6">
           <h1>More than just shorter links</h1>
-          <p style={{ color: "var(--color-grayish-violet)" }}>
-            Build your brand's recognition and get detailed insights on how your
-            links are performing.
+          <p className="text-gray">
+            <strong>
+              Build your brand's recognition and get detailed insights on how
+              your links are performing.
+            </strong>
           </p>
-          <Button
-            variant="primary"
-            className="rounded-pill border-0 px-4"
-            style={{
-              backgroundColor: "var(--color-cyan)",
-              fontWeight: "700",
-            }}>
-            Get Started
-          </Button>
+          <ThemedButton pill={true} text="Get Started" className="px-4" />
         </Col>
         <Col lg="6" className="overflow-x-hidden">
           <Image src={illustration} />

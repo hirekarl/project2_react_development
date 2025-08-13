@@ -1,6 +1,4 @@
-import Container from "react-bootstrap/Container"
-import Nav from "react-bootstrap/Nav"
-import Navbar from "react-bootstrap/Navbar"
+import { Container, Image, Nav, Navbar } from "react-bootstrap"
 
 import logo from "../../assets/logo.svg"
 
@@ -9,7 +7,7 @@ const NavBar = () => {
     <Navbar expand="lg">
       <Container className="py-3">
         <Navbar.Brand href="#home">
-          <img src={logo} />
+          <Image src={logo} className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
