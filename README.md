@@ -20,7 +20,7 @@ Write a 200-300 word reflection discussing your development process, challenges 
 >
 > Note that the Bitly API only allows for five shortlinks per month, and I've already used two. I tested the fetch functionality, and it works; I put in the details of the two URLs I was able to create with the API to demonstrate where subsequent real URLs will end up when the app is run for real. I'm fairly certain the `useLocalStorage` hook works (and sets the given URLs as a default value on first load), but I wasn't able to test with new shortlinks, given the API constraints.
 > 
-> The main "reusable" component I implemented for this was a `ThemedButton`, which changes rounding, padding, and functionality based on given props. I managed to implement a change of background color when a shortlink is copied. I'm certain I could clean up the implementation of `ThemedButton` and make it even more reusable with more time.
+> The main "reusable" component I implemented for this was a `ThemedButton`, which changes rounding, padding, and functionality based on given props. I managed to implement a change of background color when a shortlink is copied. I'm certain I could clean up the implementation of `ThemedButton` and make it even more reusable with more time. The `InfoCard` component is also reused.
 >
 > Working around the API constraints for this was the most difficult part (I tried a few other APIs but ran into the same issue); the other was working with Bootstrap to implement the design elements that change by breakpoint. (I'm looking forward to our shift to the back end!) I particularly like that when you hover over the "Shortly" logo, it compresses. I didn't see any reason to implement contexts for this, or any hooks beyond the `useLocalStorage` hook.
 
